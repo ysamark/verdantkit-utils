@@ -2,7 +2,7 @@ import { compare, hash } from "bcryptjs";
 
 import { noEmpty } from "../strings";
 
-export class Hash {
+export abstract class Hash {
   /**
    * create a password hash using bcrypt
    */
