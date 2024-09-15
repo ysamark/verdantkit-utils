@@ -13,6 +13,7 @@ export * from "./getJsonFileData";
 export * from "./getQueryMatchSearchParams";
 export * from "./getSearchParamsQueryArgument";
 export * from "./getUrlQueryParams";
+export * from "./Hash";
 export * from "./images";
 export * from "./strings";
 export * from "./stripStrAccents";
