@@ -11,9 +11,9 @@ export default defineConfig({
       VERDANT_HASH_SECRET: "VERDANT_KIT_HASH_SECRET::Key",
     },
 
-    // yarn add @vitest/coverage-v8
-    // coverage: {
-    //   enabled: true,
-    // },
+    // yarn add -D @vitest/coverage-v8
+    coverage: {
+      enabled: true,
+    },
   },
 });
