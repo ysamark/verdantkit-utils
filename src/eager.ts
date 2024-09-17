@@ -88,3 +88,35 @@ export type PathInternal<T, TraversedTypes = T> = T extends ReadonlyArray<
   : {
       [K in keyof T]-?: PathImpl<K & string, T[K], TraversedTypes>;
     }[keyof T];
+
+/**
+ * Helper type for recursively constructing paths through a type.
+ * This actually constructs the strings and recurses into nested
+ * object types.
+ *
+ * See {@link Path}
+ */
+type DotsPathImpl<K extends string | number, V, TraversedTypes> = V extends
+  | Primitive
+  | BrowserNativeObject
+  ? `${K}`
+  : true extends AnyIsEqual<TraversedTypes, V>
+  ? `${K}`
+  : `${K}` | `${K}.${DotsPathInternal<V, TraversedTypes | V>}`;
+/**
+ * Helper type for recursively constructing paths through a type.
+ * This obscures the internal type param TraversedTypes from exported contract.
+ *
+ * See {@link Path}
+ */
+export type DotsPathInternal<T, TraversedTypes = T> = T extends ReadonlyArray<
+  infer V
+>
+  ? IsTuple<T> extends true
+    ? {
+        [K in TupleKeys<T>]-?: DotsPathImpl<K & string, T[K], TraversedTypes>;
+      }[TupleKeys<T>]
+    : DotsPathImpl<ArrayKey, V, TraversedTypes>
+  : {
+      [K in keyof T]-?: DotsPathImpl<K & string, T[K], TraversedTypes>;
+    }[keyof T];
