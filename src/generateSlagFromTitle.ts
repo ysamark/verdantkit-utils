@@ -1,4 +1,4 @@
-import { stripStrAccents } from "./stripStrAccents";
+import { stripStrAccents } from "./strings/stripStrAccents";
 
 export type GenerateSlagFromTitleUtilArgsWithTitle = [string];
 

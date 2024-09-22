@@ -52,3 +52,18 @@ export const getImageDataFromUrl = async (
     return null;
   }
 };
+
+export const getImageAsUint8ArrayFromUrl = async (
+  imageUrl: string | URL
+): Promise<Nullable<Uint8Array>> => {
+  const imageData = await getImageDataFromUrl(imageUrl);
+
+  if (!imageData) {
+    return null;
+  }
+
+  const imageAsArrayBuffer = await imageData.arrayBuffer();
+  const imageAsUInt8Array = new Uint8Array(imageAsArrayBuffer);
+
+  return imageAsUInt8Array;
+};

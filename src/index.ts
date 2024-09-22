@@ -15,8 +15,9 @@ export * from "./getSearchParamsQueryArgument";
 export * from "./getUrlQueryParams";
 export * from "./Hash";
 export * from "./images";
+export * from "./numbers";
 export * from "./strings";
-export * from "./stripStrAccents";
+export * from "./strings/stripStrAccents";
 export * from "./types";
 export * from "./validations";
 

@@ -10,6 +10,16 @@ describe("Test generateSlagFromTitle util", () => {
     expect(slag).toEqual("how-to-create-a-react-styled-component");
   });
 
+  it("should generate a slag without signature given an options object with a title string", () => {
+    const title = "How to create a React styled component";
+
+    const slag = generateSlagFromTitle({
+      title,
+    });
+
+    expect(slag).toEqual("how-to-create-a-react-styled-component");
+  });
+
   it("should generate a slag with signature given a title string", () => {
     const title = "How to create a React styled component";
 

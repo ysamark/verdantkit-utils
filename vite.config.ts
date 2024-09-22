@@ -1,10 +1,12 @@
+import path from "node:path";
+
 import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   test: {
     alias: {
       // search about
-      "~/": "./src",
+      "~": path.resolve(__dirname, "src"),
     },
 
     env: {

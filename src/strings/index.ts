@@ -28,3 +28,13 @@ export {
   capitalizeWords as ucWords,
   capitalize as usFirst,
 };
+
+export * from "./camelCaseToDotsNotation";
+export * from "./camelCaseToN";
+export * from "./camelCaseToPascalCase";
+export * from "./camelCaseToSnakeCase";
+export * from "./regReplaceCallback";
+export * from "./strReplaceCallBack";
+export * from "./subStrReplace";
+export * from "./upperSnakeCaseToCamelCase";
+export * from "./upperSnakeCaseToPascalCase";
