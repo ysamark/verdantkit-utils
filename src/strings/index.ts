@@ -25,8 +25,8 @@ export const empty = (data: unknown): boolean => !noEmpty(data);
 export {
   unCapitalize as lcFirst,
   unCapitalizeWords as lcWords,
+  capitalize as ucFirst,
   capitalizeWords as ucWords,
-  capitalize as usFirst,
 };
 
 export * from "./camelCaseToDotsNotation";
