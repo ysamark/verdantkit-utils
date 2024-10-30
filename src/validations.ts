@@ -1,5 +1,5 @@
 export const validAngolanPhoneNumber = (phoneNumber: string): boolean => {
-  const re = /^((\+?244)?9[12345]([0-9]{7}))$/;
+  const re = /^((\+?244)?9[123459]([0-9]{7}))$/;
 
   return re.test(phoneNumber);
 };
