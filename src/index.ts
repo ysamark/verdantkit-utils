@@ -4,7 +4,14 @@ import { PathInternal } from "./eager";
 import { noEmpty } from "./strings";
 
 export * from "./arrays";
+export * from "./base64Decode";
+export * from "./base64Encode";
+export * from "./base64ToUint8Array";
+export * from "./compressBase64";
+export * from "./compressString";
 export * from "./cookies";
+export * from "./decompressBase64";
+export * from "./decompressString";
 export * from "./eager";
 export * from "./filterValidImageFiles";
 export * from "./formDataToJson";
@@ -19,6 +26,7 @@ export * from "./numbers";
 export * from "./strings";
 export * from "./strings/stripStrAccents";
 export * from "./types";
+export * from "./uint8ArrayToBase64";
 export * from "./validations";
 
 export const generateRandomId = (): string =>

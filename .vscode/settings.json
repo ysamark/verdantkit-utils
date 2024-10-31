@@ -4,6 +4,7 @@
     "github",
     "noreply",
     "ommit",
+    "pako",
     "postpush",
     "prepush",
     "verdantkit",
